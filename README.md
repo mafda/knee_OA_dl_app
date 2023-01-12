@@ -1,5 +1,12 @@
-Disclaimer
+# Knee Osteoarthritis Analysis with X-ray Images using Deep Convolutional Neural Networks
 
-This software is not a medical device and intended for the use in research settings only.
+Web app to predict knee osteoarthritis grade using Deep Learning.
 
-https://github.com/suhas1992/knee_OA_staging
+
+## References
+
+- [Complex data mining](https://www.ic.unicamp.br/~mdc/) at unicamp
+
+---
+
+made with 💙 by [mafda](https://mafda.github.io/)
