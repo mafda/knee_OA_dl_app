@@ -29,7 +29,8 @@
 
 ## Project Setup
 
-How does the Web app to predict knee osteoarthritis grade using Deep Learning works?
+How does the Web App to **predict** knee osteoarthritis grade using **Deep
+Learning** and **Streamlit** works?
 
 ### Clone this repository
 
@@ -54,7 +55,7 @@ How does the Web app to predict knee osteoarthritis grade using Deep Learning wo
 
 - Download `model_Xception_ft.hdf5` model from
    [here](https://drive.google.com/file/d/1vPS_j2AW3M1W8GydREEDw6CDENSgVwCy/view?usp=share_link)
-   for run the app. Create `models` folder and copy the model here.
+   to run the application. Create `models` folder and copy the model here.
 
     ```shell
     (knee_dl_app)$: mkdir src/models
@@ -62,7 +63,7 @@ How does the Web app to predict knee osteoarthritis grade using Deep Learning wo
 
 - Download the dataset from [Knee Osteoarthritis Dataset with Severity
    Grading](https://www.kaggle.com/datasets/shashwatwork/knee-osteoarthritis-dataset-with-severity)
-   for train models and test app. Create `dataset` folder and copy the data
+   to train the model and test the application. Create `dataset` folder and copy the data
    here.
 
     ```shell
@@ -80,14 +81,15 @@ How does the Web app to predict knee osteoarthritis grade using Deep Learning wo
 
     Or you can navigate to `http://localhost:8501`.
 
-## Results
+## Results Knee OA Deep Learning App
 
 ![streamlit app - knee_dl_app](assets/streamlit_knee_low.gif)
 
 
 ## References
 
-- [Complex data mining](https://www.ic.unicamp.br/~mdc/) at [unicamp](https://www.unicamp.br/unicamp/).
+- [Complex data mining](https://www.ic.unicamp.br/~mdc/) at
+  [unicamp](https://www.unicamp.br/unicamp/).
 
 ---
 
