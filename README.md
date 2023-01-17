@@ -31,9 +31,9 @@ Grading](https://www.kaggle.com/datasets/shashwatwork/knee-osteoarthritis-datase
 
 ![KL Score](assets/kl-score.png)
 
-## Objective
+## Purpose
 
-The objective of this project is to correctly classify the severity of
+The purpose of this project is to correctly classify the severity of
 osteoarthritis based on X-ray images.
 
 ![streamlit app - knee_dl_app](assets/streamlit_knee_ss.png)
@@ -133,19 +133,39 @@ The dataset consisting of 8000 X-ray images, approximately, of the knee obtained
 
 ![data](assets/data.png)
 
-In the *bar chart* we can see the distribution of the 5 classes, for each of the training, validation and test datasets, and in the *pie chart* we can see the average percentage of data we have for each class. So we have an **unbalanced** dataset.
+In the *bar chart* we can see the image distribution of the 5 grades (classes), for each of the training, validation and test datasets, and in the *pie chart* we can see the average percentage of data we have for each class. So we have an **unbalanced** dataset.
 
 Three strategies were implemented to reduce the impact that the unbalanced base can have on the models:
 
 - class weight
-- data augmentation
+- data augmentation (horizontal_flip, brightness_range, width_shift_range, zoom_range)
 - preprocessing features of pre-trained networks
 
 > See [01_data_preparation.ipynb](src/01_data_preparation.ipynb) notebook.
 
-
 ### Model training
 
+#### Pre-trained Networks
+
+Three pre-trained networks were chosen:[ResNet-50](https://arxiv.org/abs/1512.03385), [Xception](https://arxiv.org/abs/1610.02357) e [Inception Resnet v2](https://arxiv.org/abs/1602.07261v2). 
+
+The following table presents the summary of the partial results obtained in the implementation of the different pre-trained networks with fine tuning. Our metrics is Balanced Accuracy. Models were trained on Apple M1 Pro chip with 8-core CPU, 14-core GPU and 16-core Neural Engine.
+
+| Model                           | Balanced Accuracy | Time Execution |
+| ------------------------------- | ----------------- | -------------- |
+| Xception fine tuning            | 67%               | 68min          |
+| ResNet50 fine tuning            | 65%               | 80min          |
+| Inception_resnet_v2 fine tuning | 64%               | 56min          |
+
+![Confusion Matrix](assets/confusion_matrix_3_models.png)
+
+Highlighting, the highest success rate of each model by class, we have:
+
+- Inception ResNet classified the minimum class better
+- Xception classified the doubtful and severe classes better
+- ResNet50 classified the healthy and moderate classes better
+   
+#### Ensemble
 
 
 
