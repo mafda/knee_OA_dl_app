@@ -179,7 +179,9 @@ Highlighting, the highest success rate of each model by class, we have:
 - ResNet50 classified the healthy and moderate classes better
 
 > See [02_model_inception_resnet_v2.ipynb](src/02_model_inception_resnet_v2.ipynb)
+
 > See [02_model_xception.ipynb](src/02_model_xception.ipynb)
+
 > See [02_model_resnet50.ipynb](src/02_model_resnet50.ipynb)
    
 #### Ensemble
@@ -228,6 +230,8 @@ Grad-CAM results were obtained from the last convolutional layer of the
 ![Moderate](assets/Moderate.png)
 ![Severe](assets/Severe.png)
 
+> See [03_best_model_on_test_xception.ipynb](src/03_best_model_on_test_xception.ipynb)
+
 ### Web application development with the best model
 
 The web application allows you to select and load an X-Ray image, to later
@@ -236,6 +240,8 @@ disease severity, as well as the area that most impacted the classification
 score.
 
 ![streamlit app - knee_dl_app](assets/streamlit_knee_low.gif)
+
+#### [pt-br] YouTube
 
 [![Análise da Gravidade de Artrose no Joelho](https://img.youtube.com/vi/gl28zQAs_rk/0.jpg)](https://www.youtube.com/watch?v=gl28zQAs_rk "Análise da Gravidade de Artrose no Joelho")
 
